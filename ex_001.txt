@@ -1,0 +1,28 @@
+1 - Qual a diferença entre um programa e um processo?
+
+2 - Como o Sistema Operacional identifica um programa?
+
+3 - Como o Sistema Operacional identifica um processo?
+
+4 - Quais as áreas de memória de um programa?
+
+5 - Quais as áreas de memória de um processo?
+
+6 - Quais as características de uma variável?
+
+7 - Quais as áreas de memória de um processo que uma variável pode estar?
+
+8 - Escreva o seguinte programa em C:
+
+int main() {
+    int i = 7;
+}
+
+	a - Supondo que o nome do programa é 'p000.ex', explique o que acontence quando o usuário digita 'p000' em um terminal
+	
+	b - Quais as características da variável 'i'?
+	
+	c - Em qual área de memória a variável 'i' existe?
+
+
+

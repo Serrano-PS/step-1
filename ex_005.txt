@@ -1,0 +1,1 @@
+Escrever um programa que pergunte ao usuário o tamanho de um vetor de inteiros, em seguida pergunte o valor de cada inteiro, e por fim imprima o vetor de inteiros.

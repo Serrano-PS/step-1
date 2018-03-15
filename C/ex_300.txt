@@ -1,0 +1,12 @@
+Escreva um progama que:
+
+1 - Crie funções para manipular 'struct pessoa'
+	a - 'inicializa_pessoa'
+	b - 'copia_pessoa'
+	c - 'imprime_pessoa'
+
+2 - Crie um vetor de 3 'struct pessoa'
+
+3 - Pergunte ao usuário os valores das 3 pessoas
+
+4 - Imprima as 3 pessoas

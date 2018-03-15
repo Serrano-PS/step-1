@@ -1,0 +1,1 @@
+Com base no ex_004_inicio.c, altere a função que percorre uma matriz de pessoas, de tal forma que possa ser usada para procurar uma pessoa.

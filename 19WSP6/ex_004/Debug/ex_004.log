@@ -1,0 +1,3 @@
+﻿  main.c
+c:\users\student\documents\canellas@itstep.org\19wsp6\ex_004\main.c(145): warning C4715: 'percorre_pessoas': not all control paths return a value
+  ex_004.vcxproj -> C:\Users\Student\Documents\canellas@itstep.org\19WSP6\Debug\ex_004.exe

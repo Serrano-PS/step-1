@@ -5,7 +5,7 @@ Se 'i' for maior que 75, 'f2' deve retornar -1. Caso contrário, 'd' deverá conte
 Imprima os valores 'i', 'u' e '*u'.
 
 Escreva uma função 'main' que declare e defina um inteiro 'k' com 11, declare um double 'u', e um double 'v'.
-'u' receberá o retorno de 'f1', tendo 'i' como parâmetro.
-Passe 'i' e 'v' como parâmetros para 'f2'.
+'u' receberá o retorno de 'f1', tendo 'k' como parâmetro.
+Passe 'k' e 'v' como parâmetros para 'f2'.
 Imprima os valores de 'i', 'u', 'v' e '&v'.
 

@@ -1,0 +1,5 @@
+Declare uma função 'f1' que tem os argumentos inteiro 'i' e double 'd', e retorne a divisão de 'd' por 'i'. Na definição de 'f1', imprima os valores de 'i', 'd' e do resultado da divisão.
+
+Declare uma função 'f2' que tem como argumentos inteiro 'i', um double 'd', e um ponteiro para double 'r'. 'f2' deve retorna -1 se 'i' for 0, e 'r' deverá conter o resultado da divisão de 'd' por 'i'. Na definição de 'f2', imprima os valores de 'i', 'd', 'r', da área endereçada por 'r' antes e depois do cálculo.
+
+Declare na função 'main' as variáveis inteira i1 com valor 10, inteira i2 com valor 0, double 'g1' com valor 2.5, double 'g2'e double 'g3'. Chame 'f1' como 'i1' e 'g1', e imprima os valores de 'i1', 'g1', e o resultado da execução de 'f1'. Execute 'f2' com 'i1', 'g1' e 'g2'. Imprima os valores de 'i1', 'g1', 'g2' e o endereço de 'g2'. Chame 'f2' com 'i2' e 'g1' e 'g3', e imprima os valroes de 'i1', 'g1', 'g3' e o endereço de 'g3'.

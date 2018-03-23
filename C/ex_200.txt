@@ -1,4 +1,4 @@
-1 - Dado o seguinte código:
+﻿1 - Dado o seguinte código:
 
 int main() {
 	int m1[3] = { 45, -1, 9 };
@@ -36,8 +36,8 @@ int main() {
  	    dica 1 - um 'int' pode ter até 5 digitos, então pense no tamanho necessário do string
  	    dica 2 - use a função 'atoi' para converter o string com o valor que o usuário entrou para 'int'
  	
- 	c - Escreva uma função 'f1' que imprima a matriz em ordem decrescente, usando '[]' para acessar os elementos da matriz
+ 	c - Escreva uma função 'f1' que imprima a matriz do último para o primeiro elemento, usando '[]' para acessar os elementos da matriz
  	
- 	d - Escreva uma função 'f2' que imprima a matriz em ordem decrescente, usando endereçamento direto (aritmética de ponteiro) para acessar os elementos da matriz
+ 	d - Escreva uma função 'f2' que imprima a matriz do último para o primeiro elemento, usando endereçamento direto (aritmética de ponteiro) para acessar os elementos da matriz
  	
  	e - Chame as funções 'f1' e 'f2' para a matriz 'm'.

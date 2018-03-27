@@ -1,4 +1,4 @@
-﻿1 - Dado o seguinte código:
+﻿ 1 - Dado o seguinte código:
 
 int main() {
 	int m1[3] = { 45, -1, 9 };

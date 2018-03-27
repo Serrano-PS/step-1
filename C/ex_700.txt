@@ -1,0 +1,6 @@
+Continuando o projeto da lista encadeada, implemente e teste as funções:
+
+void percorre_lista(no * lista, int (*f) (no *p));
+int imprime_no(no *p);
+
+E use estas funções para imprimir o conteúdo da lista.

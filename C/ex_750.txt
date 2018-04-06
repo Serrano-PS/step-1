@@ -1,0 +1,4 @@
+
+Adapte as funções de lista para que o campo 'valor' não seja um 'int', mas um 'struct pessoa' dos exercícios anteriores.
+
+Escreva uma função de percurso genérica que permite encontrar uma uma pessoa específica na lista, usando a funções de percurso genérico implementada acima.

@@ -1,0 +1,23 @@
+Escreva um progama que:
+
+Crie uma função genérica de percurso da matriz, chamada 'percorre', que recebe como parâmetro uma função do tipo 'void (*)(double *)'.
+
+Crie uma função 'f1' do tipo 'void (*)(double *)' que deve mudar o sinal do 'double *' se ele for negativo.
+
+Crie uma função 'f2' do tipo 'void (*)(double *)' que deve imprimir o valor do double *' se ele for maior que 30.
+
+Crie uma função 'f3' do tipo 'void (*)(double *)' que deve imprimir o valor do double *'.
+
+
+
+Na função 'main', declare e defina uma matriz de 'double' de 10 elementos.
+
+Chame a função 'percorre' passando 'f3' como parâmetro.
+
+Chame a função 'percorre' passando 'f1' como parâmetro.
+
+Chame a função 'percorre' passando 'f3' como parâmetro.
+
+Chame a função 'percorre' passando 'f2' como parâmetro.
+
+

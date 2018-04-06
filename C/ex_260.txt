@@ -1,0 +1,8 @@
+
+Altere a função 'percorre' do exercício anterior, de modo que possa ser usada para calcular um valor baseado em toda a matriz.
+
+Por exemplo, que se possa calcular a média dos valores, ou determinar o maior valor na matriz. 
+
+A função genérica passada como parâmetro também precisará ser alterada.
+
+Para testar, escreva uma função genérica para calcular o somatório dos valores da matriz, e outra para determinar o menor valor.

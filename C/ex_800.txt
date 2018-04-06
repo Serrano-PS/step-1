@@ -1,0 +1,5 @@
+Escreva um programa que receba 2 parâmetros, e imprima os valores destes parâmetros.
+
+Em seguida, converta o primeiro parâmetro para 'int', e o segundo para 'char', e os imprima.
+
+Na mensagem mostrando a maneira correta de chamar o programa, exiba somente o nome do programa, extraído de 'argv[0]', e não o caminho completo.

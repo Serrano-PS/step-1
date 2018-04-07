@@ -1,0 +1,4 @@
+﻿  main.c
+c:\users\admin\source\repos\08sps3\leo_000\main.c(57): warning C4013: 'malloc' undefined; assuming extern returning int
+c:\users\admin\source\repos\08sps3\leo_000\main.c(80): warning C4013: 'free' undefined; assuming extern returning int
+  leo_000.vcxproj -> C:\Users\Admin\source\repos\08SPS3\Debug\leo_000.exe

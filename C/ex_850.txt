@@ -1,0 +1,5 @@
+Dado um string que é o path completo de um programa, extraia somente o nome do programa.
+
+Ex: path = C:\Users\Admin\Documents\canellas@itstep.org\step\08SPS3\Debug\linha_comando.exe, então nome = linha_comando
+
+

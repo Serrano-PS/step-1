@@ -1,0 +1,7 @@
+Escreva um programa que crie, se não existir, um arquivo com nome 'teste00.txt', permitindo leitura e escrita.
+
+Este programa deve receber como parâmetros:
+- uma string com o diretório onde 'teste00.txt' deve ser gravado (vão precisar usar 'strcat')
+- uma string e gravá-la no arquivo, em uma nova linha.
+
+Em seguida, deve ler todo o arquivo, e mostrá-lo na saída padrão.

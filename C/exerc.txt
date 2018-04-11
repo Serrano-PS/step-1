@@ -1,0 +1,1 @@
+Criar pacote e classe para conexão com o banco.

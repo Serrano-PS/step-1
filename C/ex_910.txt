@@ -1,1 +1,1 @@
-Complete a função 'grava_pessoa' do exercício começado em sala, sabendo que o 'salario' deve ter o formato '999999.99'.
+Implementar a função 'int le_todo_arquivo_e_imprime_cada_buffer(FILE * file);'

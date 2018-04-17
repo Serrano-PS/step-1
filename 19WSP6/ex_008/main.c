@@ -26,27 +26,38 @@ int inicializa_pessoa(pessoa *p, char * p_nome, idade p_idade, salario p_salario
 int imprime_pessoa(pessoa *p1);
 int imprime_pessoas(pessoa *p, int tam);
 int grava_pessoa(const pessoa * p, FILE * file);
+int le_todo_arquivo_e_imprime_cada_buffer(FILE * file);
 
 int main(int argc, char ** argv) {
 	if (argc != 2) {
 		printf("Falta o nome do arquivo\n");
 		return 10;
 	}
-
-	//printf("nome do pgm = %s, nome do arquivo = %s\n", argv[0], argv[1]);
-
-	pessoa p;
-	obtem_pessoa(&p);
-	imprime_pessoa(&p);
-
-	
-	FILE * file = NULL;
 	// abrir o arquivo
+	FILE * file = fopen(argv[1], "a+");
+	if (file == NULL) {
+		printf("Não abriu %s\n", argv[1]);
+		return 20;
+	}
+
+	int rc = 1;
+
+	// recuperando as pessoas no arquivo
+
+
+
+	// obtendo novas pessoas
+	pessoa p;
+	rc = obtem_pessoa(&p);
+	if (rc != 1) {
+		printf("Erro %d\n", rc);
+		return 30;
+	}
 
 	grava_pessoa(&p, file);
 
 	// fecha o arquivo
-	
+	fclose(file);
 	return 0;
 }
 
@@ -150,19 +161,57 @@ int imprime_pessoas(pessoa *p, int tam) {
 }
 
 int grava_pessoa(const pessoa * p, FILE * file) {
+
+	if (p == NULL) {
+		return -1;
+	}
+
+	if (file == NULL) {
+		return -2;
+	}
+
 	char buf[TAM_BUF];
 
+	// inicializa o buffer que vai conter a 'pessoa' com brancos
 	memset(buf, ' ', TAM_BUF);
 
-	strcpy(buf, p->m_nome);
+	// copia o nome para o início do buffe
+//	strcpy(buf, p->m_nome);
+	memcpy(buf, p->m_nome, strlen(p->m_nome));
 
+	// formata a idade com 3 dígitos, preenchidos com 0 à esquerda
 	char buf_idade[4];
 	memset(buf_idade, '\0', 4);
 	sprintf(buf_idade, "%03d", p->m_idade);
 	printf("%s\n", buf_idade);
+	
+	// copia a idade formatada para o buffer
+	memcpy(buf + TAM_NOME - 1, buf_idade, strlen(buf_idade));
 
-	memcpy(buf + 50, buf_idade, strlen(buf_idade));
+	// formata o salário no formato 999999.99, preenchidos com 0 à esquerda
+	char buf_salario[9 + 1];
+	memset(buf_salario, '\0', 10);
+	sprintf(buf_salario, "%09.2lf", p->m_salario);
+
+	// copia o salário formatado para o buffer
+	memcpy(buf + TAM_NOME - 1 + strlen(buf_idade), buf_salario, strlen(buf_salario));
+
+	// copia o sexo
+	buf[TAM_NOME - 1 + strlen(buf_idade) + strlen(buf_salario)] = p->m_sexo;
+
+	if (fwrite(buf, 1, TAM_BUF, file) != TAM_BUF) {
+		return -3;
+	}
+
+	fflush(file);
 
 	return 1;
+}
+
+int le_todo_arquivo_e_imprime_cada_buffer(FILE * file) {
+	int rc = 1;
+
+
+	return rc;
 }
 

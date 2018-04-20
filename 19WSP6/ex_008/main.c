@@ -23,42 +23,61 @@ typedef struct pessoa_t pessoa;
 
 int obtem_pessoa(pessoa * p);
 int inicializa_pessoa(pessoa *p, char * p_nome, idade p_idade, salario p_salario, char p_sexo);
+
+// p_buf tem o formato 50c + 999 + 999999.99 + M/F
+int inicializa_pessoa_1(pessoa *p, const char * p_buf);
 int imprime_pessoa(pessoa *p1);
 int imprime_pessoas(pessoa *p, int tam);
 int grava_pessoa(const pessoa * p, FILE * file);
 int le_todo_arquivo_e_imprime_cada_buffer(FILE * file);
 
 int main(int argc, char ** argv) {
-	if (argc != 2) {
-		printf("Falta o nome do arquivo\n");
-		return 10;
-	}
-	// abrir o arquivo
-	FILE * file = fopen(argv[1], "a+");
-	if (file == NULL) {
-		printf("Não abriu %s\n", argv[1]);
-		return 20;
-	}
-
 	int rc = 1;
 
-	// recuperando as pessoas no arquivo
+	FILE * file = NULL;
 
-
-
-	// obtendo novas pessoas
-	pessoa p;
-	rc = obtem_pessoa(&p);
-	if (rc != 1) {
-		printf("Erro %d\n", rc);
-		return 30;
+	if (argc != 2) {
+		printf("Falta o nome do arquivo\n");
+		rc = 10; goto out;
+	}
+	// abrir o arquivo
+	file = fopen(argv[1], "a+");
+	if (file == NULL) {
+		printf("Não abriu %s\n", argv[1]);
+		rc = 20; goto out;
 	}
 
-	grava_pessoa(&p, file);
 
+	// recuperando as pessoas no arquivo
+	rc = le_todo_arquivo_e_imprime_cada_buffer(file);
+	if (rc != 1) {
+		printf("Nao leu o arquivo: %d\n", rc);
+		rc = 30; goto out;
+	}
+
+
+	// http://en.cppreference.com/w/c/io/fread
+
+	//// obtendo novas pessoas
+	//pessoa p;
+	//rc = obtem_pessoa(&p);
+	//if (rc != 1) {
+	//	printf("Nao obteve pessoa: %d\n", rc);
+	//	rc = 40; goto out;
+	//}
+
+	//rc = grava_pessoa(&p, file);
+	//if (rc != 1) {
+	//	printf("Nao gravou pessoa: %d\n", rc);
+	//	rc = 40; goto out;
+	//}
+
+out:
 	// fecha o arquivo
-	fclose(file);
-	return 0;
+	if (file != NULL) {
+		fclose(file);
+	}
+	return (rc == 1 ? 0 : rc);
 }
 
 
@@ -211,7 +230,78 @@ int grava_pessoa(const pessoa * p, FILE * file) {
 int le_todo_arquivo_e_imprime_cada_buffer(FILE * file) {
 	int rc = 1;
 
+	if (file == NULL) { rc = -1; goto out; }
 
+	char buf[TAM_BUF + 1];
+	memset(buf, '\0', TAM_BUF + 1);
+	int reads = fread(buf, 1, TAM_BUF, file);
+	pessoa _pessoa;
+	while (!feof(file)) {
+		if ((inicializa_pessoa_1(&_pessoa, buf)) != 1) { rc = -3; goto out; }	
+		if (reads == TAM_BUF) {
+			printf("buf = %s\n", buf);
+		}
+		else { rc = -2; goto out; }
+		reads = fread(buf, 1, TAM_BUF, file);
+	}
+out:
 	return rc;
 }
 
+int inicializa_pessoa_1(pessoa *p, const char * p_buf) {
+
+	int rc = 1;
+	if (!p) {
+		return -1;
+	}
+
+	if (strlen(p_buf) != TAM_BUF) {
+		return -2;
+	}
+
+	memset(p->m_nome, '\0', TAM_NOME);
+	char * _c1 = &(p->m_nome[0]);
+	const char * _c2 = p_buf;
+	while (1) {
+		if ((*_c2) == ' ') {
+			break;
+		}
+		if ((_c2 - p_buf) == TAM_NOME - 1) {
+			break;
+		}
+		*_c1 = * _c2;
+		++_c1;
+		++_c2;
+	}
+	printf("nome = %s\n", p->m_nome);
+
+	while ((*_c2) == ' ') { ++_c2; }
+
+	// idade 
+	char _buf_idade[4];
+	memset(_buf_idade, '\0', 4);
+	for (int i = 0; i < 3; ++i) {
+		_buf_idade[i] = *_c2;
+		++_c2;
+	}
+	printf("idade s = %s\n", _buf_idade);
+	p->m_idade = atoi(_buf_idade);
+	printf("idade i = %d\n", p->m_idade);
+
+	// salario
+	char _buf_salario[10];
+	memset(_buf_salario, '\0', 10);
+	for (int i = 0; i < 9; ++i) {
+		_buf_salario[i] = *_c2;
+		++_c2;
+	}
+	printf("salario s = %s\n", _buf_salario);
+	p->m_salario = atof(_buf_salario);
+	printf("salario f = %lf\n", p->m_salario);
+
+	//++_c2;
+	p->m_sexo = *_c2;
+	printf("sexo = %c\n", p->m_sexo);
+	return 1;
+
+}

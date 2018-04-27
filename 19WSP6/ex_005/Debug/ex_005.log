@@ -1,2 +1,26 @@
 ﻿  main.c
-  ex_005.vcxproj -> C:\Users\Admin\Documents\canellas@itstep.org\step\19WSP6\Debug\ex_005.exe
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(15): error C2059: syntax error: '<<'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(17): error C2059: syntax error: '=='
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(19): error C2059: syntax error: '>>'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(19): error C2059: syntax error: 'bad suffix on number'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(26): error C2059: syntax error: '<<'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(34): error C2059: syntax error: '>>'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(34): error C2059: syntax error: 'bad suffix on number'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(59): error C2059: syntax error: 'bad suffix on number'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(186): error C2059: syntax error: 'bad suffix on number'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(247): error C2059: syntax error: 'bad suffix on number'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(255): error C2143: syntax error: missing ';' before '<<'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(270): error C2059: syntax error: '=='
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(277): error C2065: 'lista': undeclared identifier
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(277): warning C4047: 'function': 'no *' differs in levels of indirection from 'int'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(277): warning C4024: 'percorre_lista': different types for formal and actual parameter 1
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(277): error C2099: initializer is not a constant
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(278): error C2059: syntax error: 'if'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(282): error C2059: syntax error: 'return'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(283): error C2059: syntax error: '}'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(320): warning C4013: 'ins_antes' undefined; assuming extern returning int
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(320): warning C4047: 'initializing': 'no *' differs in levels of indirection from 'int'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(327): warning C4047: 'initializing': 'no *' differs in levels of indirection from 'int'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(334): warning C4047: 'initializing': 'no *' differs in levels of indirection from 'int'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(360): error C2059: syntax error: '>>'
+c:\users\admin\documents\canellas@itstep.org\step\19wsp6\ex_005\main.c(360): error C2059: syntax error: 'bad suffix on number'

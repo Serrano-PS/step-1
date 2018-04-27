@@ -18,5 +18,19 @@
     <ClCompile Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\pessoa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\lista_pessoa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\pessoa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\lista_pessoa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

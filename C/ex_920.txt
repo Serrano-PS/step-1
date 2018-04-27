@@ -1,0 +1,1 @@
+Adaptar a 'lista' para conter variáveis do tipo 'pessoa'

@@ -119,7 +119,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\lista_pessoa.c" />
     <ClCompile Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\main.c" />
+    <ClCompile Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\pessoa.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\lista_pessoa.h" />
+    <ClInclude Include="..\..\..\..\canellas%40itstep.org\step\19WSP6\ex_008\pessoa.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
